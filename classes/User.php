@@ -6,6 +6,8 @@ class User{
   private $id;
   private $email;
   private $password;
+  private $creditCard;
+  protected $discount;
 
   function __construct($_email, $_password)
   {
@@ -59,4 +61,11 @@ class User{
     return $this->password;
   }
 
+  public function setCreditCard($_creditCard){
+    $this->creditCard = $_creditCard;
+  }
+
+  public function getCreditCard(){
+    return $this->creditCard;
+  }
 };
